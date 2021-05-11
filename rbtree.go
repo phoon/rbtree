@@ -1,7 +1,9 @@
 package rbtree
 
 const (
-	RED   = true
+	// RED color
+	RED = true
+	// BLACK color with initial value since a nil node is black
 	BLACK = false
 )
 
@@ -14,7 +16,7 @@ type (
 	// KeyTypeInt is the int that implements the KeyType interface.
 	KeyTypeInt int
 
-	// node is the red-black tree node
+	// Node is the red-black tree node
 	Node struct {
 		Key    KeyType
 		Val    interface{}
@@ -78,15 +80,16 @@ func (t *RBT) predecessor(n *Node) *Node {
 
 	if n.Left != nil {
 		return max(n.Left)
-	} else {
-		p := n.Parent
-		lc := n
-		for p != nil && lc == p.Left {
-			lc = p
-			p = p.Parent
-		}
-		return p
 	}
+
+	p := n.Parent
+	lc := n
+	for p != nil && lc == p.Left {
+		lc = p
+		p = p.Parent
+	}
+	return p
+
 }
 
 // unused in this code
@@ -98,15 +101,15 @@ func (t *RBT) successor(n *Node) *Node {
 
 	if n.Right != nil {
 		return min(n.Right)
-	} else {
-		p := n.Parent
-		lc := n
-		for p != nil && lc == p.Right {
-			lc = p
-			p = p.Parent
-		}
-		return p
 	}
+
+	p := n.Parent
+	lc := n
+	for p != nil && lc == p.Right {
+		lc = p
+		p = p.Parent
+	}
+	return p
 }
 
 // LeftRotate left rotate the node n, acting on a red link

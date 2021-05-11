@@ -1,4 +1,7 @@
 # rbtree
+
+[![Go Report Card](https://goreportcard.com/badge/github.com/phoon/rbtree)](https://goreportcard.com/report/github.com/phoon/rbtree) [![GoDoc](https://godoc.org/github.com/phoon/rbtree?status.svg)](https://godoc.org/github.com/phoon/rbtree)
+
 The Red-Black Tree implementation in Go, by dissecting the vein of its relationship with 2-3-4 tree. To get more information, check my blog: https://blog.peven.me/post/2021/05/08/the-red-black-tree/
 
 ## How to use
