@@ -8,9 +8,9 @@ The Red-Black Tree implementation in Go, by dissecting the vein of its relations
 To get interactive with rbtree, you need implement the KeyType interface, which defines the behavior `CompareTo`.
 ```go
 // KeyType is the type with CompareTo behavior.
-	KeyType interface {
-		CompareTo(c interface{}) int
-	}
+KeyType interface {
+	CompareTo(c interface{}) int
+}
 ```
 There is a `KeyTypeInt` out of box, which implement the `CompareTo` for `int`.
 
