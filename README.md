@@ -12,7 +12,7 @@ To get interactive with rbtree, you need implement the KeyType interface, which 
 		CompareTo(c interface{}) int
 	}
 ```
-There is a `KeyTypeInt` out of box, which implement the `CompareTo` of `int`.
+There is a `KeyTypeInt` out of box, which implement the `CompareTo` for `int`.
 
 ## Example
 ```go
