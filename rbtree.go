@@ -291,7 +291,7 @@ func (t *RBT) Remove(key KeyType) {
 	// predecessor or successor
 	rpl := d
 	if rpl.Left != nil && rpl.Right != nil {
-		// rpl = rpl.successor()
+		// rpl = t.successor(rpl)
 		rpl = t.predecessor(rpl)
 	} else {
 		if rpl.Left != nil {
